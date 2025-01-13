@@ -2,22 +2,36 @@ package com.example.todo.demo.Model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Entity
 public class Tasks {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nameTask;
     private LocalDate dateTask;
     private String status;
 
-    public Tasks(String nameTask, LocalDate dateTask, String status, long id) {
+    public Tasks() {
+    }
+
+    public Tasks(String nameTask, LocalDate dateTask, String status) {
         this.nameTask = nameTask;
         this.dateTask = dateTask;
         this.status = status;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -44,13 +58,4 @@ public class Tasks {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
 }

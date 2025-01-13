@@ -31,7 +31,7 @@ public class TasksServiceTest {
 
     @BeforeEach
     public void setUp() {
-        task = new Tasks("Ir ao mercado", LocalDate.of(2025, 1, 20), "incomplete", 1);
+        task = new Tasks("Ir ao mercado", LocalDate.of(2025, 1, 20), "incomplete");
     };
 
     @Test

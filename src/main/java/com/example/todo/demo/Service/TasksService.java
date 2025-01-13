@@ -14,8 +14,6 @@ public class TasksService {
 
     @Autowired
     TasksRepository repository;
-    @Autowired
-    RegistrarDuplicationException duplicationTask;
 
     @Transactional
     public Tasks criarTasks(Tasks tasks) {
